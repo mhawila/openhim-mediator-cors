@@ -9,4 +9,4 @@ RUN npm install
 COPY . .
 
 CMD npm start
-EXPOSE 3002
+EXPOSE 4321

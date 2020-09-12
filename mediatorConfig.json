@@ -1,31 +1,31 @@
 {
-  "urn": "urn:mediator:skeleton-production-mediator",
-  "version": "0.0.1",
-  "name": "Skeleton Production Bootstrap Mediator",
-  "description": "Skeleton Production Bootstrap Mediator",
+  "urn": "urn:mediator:cors",
+  "version": "1.0.0",
+  "name": "HTTP CORS Interceptor Mediator",
+  "description": "Intercepts browser requests to add necessary CORS headers",
   "defaultChannelConfig": [
     {
-      "name": "Production Bootstrap Test Route",
-      "urlPattern": "^/testEndpoint$",
+      "name": "HTTP CORS Interceptor Test Route",
+      "urlPattern": "^/cors-interceptor-test$",
       "routes": [
         {
-          "name": "Test Endpoint",
-          "host": "localhost",
+          "name": "HTTP CORS Interceptor Endpoint",
+          "host": "core-interceptor-mediator",
           "port": "4321",
           "primary": true,
           "type": "http"
         }
       ],
-      "allow": ["test"],
-      "methods": ["GET"],
+      "allow": ["admin"],
+      "methods": ["OPTIONS"],
       "type": "http"
     }
   ],
   "endpoints": [
     {
-      "name": "Production Bootstrap Test Endpoint",
-      "host": "localhost",
-      "path": "/testEndpoint",
+      "name": "HTTP CORS Interceptor Test Endpoint",
+      "host": "cors-mediator",
+      "path": "/",
       "port": "4321",
       "primary": true,
       "type": "http"
